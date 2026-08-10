@@ -70,6 +70,11 @@ h1.headline .hl{
 }
 .sub{margin-top:22px; font-size:1.08rem; color:var(--ink-soft); max-width:46ch;}
 .hero-actions{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+.role-badge{
+  margin-top:18px; font-size:0.82rem; font-weight:500; color:var(--ink);
+  background:rgba(255,193,69,0.25); border:1.5px solid var(--ink);
+  display:inline-block; padding:9px 16px; border-radius:9px; max-width:46ch;
+}
 .btn-primary, .btn-ghost{
   font-family:'JetBrains Mono', monospace; font-size:0.85rem; font-weight:500;
   padding:13px 22px; border-radius:9px; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
@@ -149,6 +154,16 @@ section{padding:88px 0;}
   border:1.5px solid var(--grid); background:var(--bg); transition:border-color .15s ease, transform .15s ease;
 }
 .chip:hover{transform:translateY(-2px); border-color:var(--ink);}
+.skill-list{list-style:none; display:flex; flex-direction:column; gap:9px;}
+.skill-list li{
+  font-family:'JetBrains Mono', monospace; font-size:0.86rem; color:var(--ink);
+  display:flex; align-items:center; gap:10px;
+}
+.skill-list li::before{content:''; width:7px; height:7px; border-radius:2px; background:var(--violet); flex-shrink:0;}
+.skill-groups .skill-group:nth-child(1) .skill-list li::before{background:var(--violet);}
+.skill-groups .skill-group:nth-child(2) .skill-list li::before{background:var(--yellow);}
+.skill-groups .skill-group:nth-child(3) .skill-list li::before{background:var(--pink);}
+.skill-groups .skill-group:nth-child(4) .skill-list li::before{background:var(--teal);}
 
 /* ---------- PROJECTS ---------- */
 .project-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
@@ -196,8 +211,14 @@ section{padding:88px 0;}
   padding:22px 0; border-bottom:1px solid var(--grid);
 }
 .log-row .time{font-family:'JetBrains Mono', monospace; font-size:0.82rem; color:var(--ink-soft); padding-top:3px;}
-.log-row h3{font-size:1.05rem; margin-bottom:4px;}
+.log-row h3{font-size:1.05rem; margin-bottom:8px;}
 .log-row p{color:var(--ink-soft); font-size:0.92rem;}
+.exp-list{list-style:none; display:flex; flex-direction:column; gap:8px;}
+.exp-list li{
+  color:var(--ink-soft); font-size:0.92rem; line-height:1.5;
+  display:flex; gap:10px; align-items:flex-start;
+}
+.exp-list li::before{content:'▸'; color:var(--violet); flex-shrink:0; font-size:0.8rem; margin-top:3px;}
 .log-row .co{font-family:'JetBrains Mono', monospace; font-size:0.78rem; color:var(--violet); font-weight:600; white-space:nowrap; padding-top:3px;}
 
 /* ---------- CONTACT ---------- */
